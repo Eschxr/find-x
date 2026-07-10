@@ -1,17 +1,45 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
+
 [project]
 name = "find-x"
-version = "0.1.0"
-description = "Add your description here"
+dynamic = ["version"]
+description = "Query repositories using natural language, without LLM-dependence."
 readme = "README.md"
 authors = [
     { name = "Eschxr", email = "46295107+Eschxr@users.noreply.github.com" }
 ]
-requires-python = ">=3.14"
-dependencies = []
+requires-python = ">=3.11"
+dependencies = [
+	"typer>=0.12",
+	"rich>=13.0",
+	"sentence-transformers>=3.0",
+	"numpy>=1.26",
+]
 
 [project.scripts]
-find-x = "find_x:main"
+find-x = "find_x.cli:app"
 
-[build-system]
-requires = ["uv_build>=0.11.16,<0.12.0"]
-build-backend = "uv_build"
+[project.optional-dependencies]
+faiss = ["faiss-cpu>=1.8"]
+web = ["fastapi", "uvicorn"]
+treesitter = ["tree-sitter", "tree-sitter-languages"]
+
+[dependency-groups]
+dev = [
+	"pytest>=8.0",
+	"pytest-cov",
+	"ruff",
+	"mypy",
+]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/find-x", "README.md", "LICENSE"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/find-x"]
+
