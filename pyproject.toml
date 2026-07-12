@@ -42,4 +42,3 @@ include = ["src/find-x", "README.md", "LICENSE"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/find-x"]
-

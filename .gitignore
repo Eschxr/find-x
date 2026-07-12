@@ -219,3 +219,6 @@ __marimo__/
 
 # Custom
 .repo-explorer-data/
+evals/results/
+dist/
+*.egg-info/
