@@ -19,10 +19,11 @@ dependencies = [
 	"rich>=13.0",
 	"sentence-transformers>=3.0",
 	"numpy>=1.26",
+	"pydantic>=2.13.4",
 ]
 
 [project.scripts]
-find-x = "find_x.cli:app"
+find-x = "find-x.cli:app"
 
 [project.optional-dependencies]
 faiss = ["faiss-cpu>=1.8"]
