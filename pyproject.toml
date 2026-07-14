@@ -43,3 +43,19 @@ include = ["src/find_x", "README.md", "LICENSE"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/find_x"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-ra --strict-markers --cov=find_x --cov-report=term-missing"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["src/find_x"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+exclude_lines = [
+	"pragma: no cover",
+	"if __name__ == .__main__.:",
+]

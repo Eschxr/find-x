@@ -222,3 +222,8 @@ __marimo__/
 evals/results/
 dist/
 *.egg-info/
+
+# Test fixtures
+# __pycache__/ under test repo is a deliberate fixture
+!tests/fixtures/sample_repo/__pycache__/
+!tests/fixtures/sample_repo/__pycache__/ignored.py
