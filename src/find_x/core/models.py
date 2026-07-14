@@ -1,4 +1,4 @@
-# src/find-x/core/models.py
+# src/find_x/core/models.py
 """ Core data models, shared across chunking, embedding, storage & search """
 
 from __future__ import annotations

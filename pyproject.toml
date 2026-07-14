@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 source = "vcs"
 
 [project]
-name = "find-x"
+name = "find_x"
 dynamic = ["version"]
 description = "Query repositories using natural language, without LLM-dependence."
 readme = "README.md"
@@ -23,7 +23,7 @@ dependencies = [
 ]
 
 [project.scripts]
-find-x = "find-x.cli:app"
+find_x = "find_x.cli:app"
 
 [project.optional-dependencies]
 faiss = ["faiss-cpu>=1.8"]
@@ -39,7 +39,7 @@ dev = [
 ]
 
 [tool.hatch.build.targets.sdist]
-include = ["src/find-x", "README.md", "LICENSE"]
+include = ["src/find_x", "README.md", "LICENSE"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/find-x"]
+packages = ["src/find_x"]
