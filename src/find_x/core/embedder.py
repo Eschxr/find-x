@@ -1,4 +1,3 @@
-#src/find_x/core/embedder.py
 """ Embeds chunks into vectors 
 
 Stubbed: Implement with sentence-transformers later

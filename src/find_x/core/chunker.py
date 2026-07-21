@@ -1,4 +1,3 @@
-#src/find_x/core/chunker.py
 """ Coordinates each file to the corresponding chunking strategy 
 
 Everything uses line_based chunking for now, later will be a

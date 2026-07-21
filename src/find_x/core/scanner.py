@@ -1,4 +1,3 @@
-# src/find_x/core/scanner.py
 """ Scans a repository & yields source files for chunking
 
 Currently very limited in terms of allowed & disallowed extensions

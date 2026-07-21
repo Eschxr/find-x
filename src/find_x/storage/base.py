@@ -1,4 +1,3 @@
-#src/find_x/storage/base.py
 """ Abstract vector store interface
 
 Stubbed, empty methods for testing

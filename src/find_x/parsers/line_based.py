@@ -1,4 +1,3 @@
-#src/find_x/parsers/line_based.py
 """ Naive line-window chunking
 
 Every parser exposes a `chunk(path, repo_root) -> list[CodeChunk]`

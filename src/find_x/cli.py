@@ -1,4 +1,3 @@
-#src/find_x/cli.py
 """ CLI entry point """
 
 from __future__ import annotations
